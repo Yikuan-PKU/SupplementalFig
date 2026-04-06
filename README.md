@@ -12,7 +12,7 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ![Figure 2](Fig2.png)
 
-**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. Left: empirical covariance. Right: AWD-based H_2 (the 2nd moment). Unlike the per-layer plots, the Multi-layer log-log curves do not follow a single clean linear relationship: the local slope varies across the eigenvalue range.
+**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. Left: empirical covariance. Right: AWD-based H_2 (the 2nd moment). Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range.
 
 ### Figure 3: Empirical Covar vs. AWD-based H_2 (Multi-layer level)
 
