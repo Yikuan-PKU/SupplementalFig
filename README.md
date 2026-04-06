@@ -16,7 +16,7 @@ We hope these new results, which provide the cross-layer and whole-model evidenc
 
 All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST with CE loss for 100 epochs with 100% training accuracy.
 
-### Figure 1: Per-layer Covar–H spectral analysis
+### Figure 1: Per-layer Covar–H loglog plot
 
 ![Figure 1](Fig1.png)
 
