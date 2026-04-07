@@ -12,16 +12,16 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ![Figure 2](Fig2.png)
 
-**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. (a) directly numerically computed covariance $C$ against the Hessian $H$. Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range. (b) the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian) against the Hessian H which reproduces the shape of the curve faithfully. (c) directly numerically computed covariance $C$ against the AWD-based $C_{\text{AWD}}$, showing a nearly straight line. 
+**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. (a) directly numerically computed covariance $C$ against the Hessian $H$. Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range. (b) the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian) against the Hessian H which reproduces the shape of the curve faithfully. (c) directly numerically computed covariance $C$ against the AWD-based $C_{\text{AWD}}$, showing a nearly straight line. This demonstrates that Theorem 3.4 faithfully captures the directly numerically computed covariance $C$ at the Multi-layer level, even though neither $C$ nor $C_{\text{AWD}}$ follows a clean power law against Hessian.
 
-### Figure 3: Empirical Covar vs. AWD-based H_2 (Multi-layer level)
+### Figure 3: Approximate commutativity at the Multi-layer level
 
 ![Figure 3](Fig3.png)
 
-**Figure 3.** Log-log plot (in Hessian eigenbasis) of the diagonal elements of the empirical Covar against the AWD-based H_2 (the 2nd moment). The fitted slope is $\approx 1.11$ with $R^2 \approx 0.997$, indicating near-perfect agreement. This demonstrates that Theorem 3.4 faithfully captures the empirical covariance structure at the Multi-layer level, even though neither Covar nor H_2 follows a clean power law against Hessian (cf. Figure 2).
+**Figure 3.** Top row: numerically computed covariance $C$. Bottom row: the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian). Left column: the matrix represented in the Hessian eigenbasis. Middle column: the scale-invariant correlation matrix $R_{\mathrm{real}}$, normalized by diagonal elements (mean $\mu$ and variance $\sigma^2$ shown). Right column: the randomized baseline $R_{\mathrm{rand}}$, constructed by randomly rotating the matrix while preserving its eigenvalue spectrum. For both $C$ and $C_{\text{AWD}}$, the true-eigenbasis correlation $R_{\mathrm{real}}$ has substantially smaller mean and variance than the randomized baseline $R_{\mathrm{rand}}$, confirming that approximate commutativity holds at the multi-layer level.
 
-### Figure 4: Approximate commutativity at the Multi-layer level
+### Figure 4: Non-negligible off-diagonal coupling
 
 ![Figure 4](Fig4.png)
 
-**Figure 4.** The same as Fig 1 in the paper, but for the multi-layer level instead of per-layer. Top row: empirical covariance (Covar). Bottom row: AWD-based approximation H_2 (the 2nd moment). Left column: the matrix represented in the Hessian eigenbasis. Middle column: the scale-invariant correlation matrix $R_{\mathrm{real}}$, normalized by diagonal elements (mean $\mu$ and variance $\sigma^2$ shown). Right column: the randomized baseline $R_{\mathrm{rand}}$, constructed by randomly rotating the matrix while preserving its eigenvalue spectrum. For both Covar and H_2, the true-eigenbasis correlation $R_{\mathrm{real}}$ has substantially smaller mean and variance than the randomized baseline $R_{\mathrm{rand}}$, confirming that approximate commutativity holds at the multi-layer level.
+**Figure 4.** (a) the multilayer Hessian rotated by the corresponding subspace (layer-wise) Hessian eigenvectors. It shows significant off-diagonal blocks, indicating that the off-diagonal block (inter layer) coupling is non-negligible. (b) the effect normalized coupling $|| H_{L_i,L_j}||\_F / (||H_{L_i,L_i}||\_F ||H_{L_j,L_j}||\_F)^{1/2}$ defined by normalized Frobenius Norm of each blocks $H_{L_i,L_j}$.
