@@ -6,13 +6,13 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ![Figure 1](Fig1.png)
 
-**Figure 1.** Log-log plots (in Hessian eigenbasis) of the diagonal elements of the empirical noise covariance Covar (left) and the AWD-based (the 2nd moment of persample hessian) H_2 (right) against the Hessian H, computed separately for each layer. Top row: data points are mean-centered and vertically shifted for visualization, which isolates the scaling relationship from absolute magnitude differences across layers. Bottom row: raw data plotted directly. Each layer exhibits a clean power-law relationship $C \propto H^\gamma$ with $R^2 > 0.99$. The magnitude ranges of the diagonal elements of C and H overlap strongly across layers. The fitted exponent $\gamma$ decreases from $\approx 1.39$ (Layer 1, blue) to $\approx 1.11$ (Layer 4, purple), but remains within $(1,2)$ across all layers, consistent with our theoretical prediction. The AWD-based H_2 reproduces the empirical slopes faithfully.
+**Figure 1.** Log-log plots (in Hessian eigenbasis) of the diagonal elements computed separately for each layer. (a) directly numerically computed covariance $C$ against the Hessian $H$. Each layer exhibits a clean power-law relationship $C \propto H^\gamma$ with $R^2 > 0.99$. The magnitude ranges of the diagonal elements of $C$ and $H$ overlap strongly across layers. The fitted exponent $\gamma$ decreases from $\approx 1.39$ (Layer 1, blue) to $\approx 1.11$ (Layer 4, purple), but remains within $(1,2)$ across all layers, consistent with our theoretical prediction. (b) the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian) against the Hessian H which reproduces the empirical slopes faithfully. (c) directly numerically computed covariance $C$ against the AWD-based $C_{\text{AWD}}$, showing almost straight lines with slope = 1.
 
-### Figure 2: Multi-layer Covar vs. Hessian (left) and H_2 vs. Hessian (right)
+### Figure 2: Multi-layer C–H loglog plot
 
 ![Figure 2](Fig2.png)
 
-**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. Left: empirical covariance. Right: AWD-based H_2 (the 2nd moment). Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range.
+**Figure 2.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. (a) directly numerically computed covariance $C$ against the Hessian $H$. Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range. (b) the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian) against the Hessian H which reproduces the shape of the curve faithfully. (c) directly numerically computed covariance $C$ against the AWD-based $C_{\text{AWD}}$, showing a nearly straight line. 
 
 ### Figure 3: Empirical Covar vs. AWD-based H_2 (Multi-layer level)
 
