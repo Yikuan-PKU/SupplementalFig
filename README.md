@@ -23,6 +23,6 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ### Figure 4: Non-negligible off-diagonal coupling
 
-![Figure 4](Fig4.pn)
+![Figure 4](Fig4.png)
 
 **Figure 4.** (a) the multilayer Hessian rotated by the corresponding subspace (layer-wise) Hessian eigenvectors. It shows significant off-diagonal blocks, indicating that the off-diagonal block (inter layer) coupling is non-negligible. (b) the effect normalized coupling $|| H_{L_i,L_j}||\_F / (||H_{L_i,L_i}||\_F ||H_{L_j,L_j}||\_F)^{1/2}$ defined by normalized Frobenius Norm of each blocks $H_{L_i,L_j}$.
