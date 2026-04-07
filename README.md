@@ -2,7 +2,7 @@
 
 All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST with CE loss for 100 epochs with 100% training accuracy (Bs=50, Lr=0.1).
 
-### Figure 1: Per-layer C–H loglog plot
+### Figure 1: Per-layer C–H loglog plot 
 
 ![Figure 1](Fig1.png)
 
