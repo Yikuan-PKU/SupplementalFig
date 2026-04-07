@@ -16,7 +16,7 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ### Figure 3: Multi-layer C–H loglog plot
 
-![Figure 3](Fig2.png)
+![Figure 3](Fig2.pn)
 
 **Figure 3.** Log-log plots (in Hessian eigenbasis) of the diagonal elements. (a) directly numerically computed covariance $C$ against the Hessian $H$. Unlike the per-layer plots, the Multi-layer log-log curves do not follow a clean linearity: the local slope varies across the eigenvalue range. (b) the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian) against the Hessian H which reproduces the shape of the curve faithfully. (c) directly numerically computed covariance $C$ against the AWD-based $C_{\text{AWD}}$, showing a nearly straight line. This demonstrates that Theorem 3.4 faithfully captures the directly numerically computed covariance $C$ at the Multi-layer level, even though neither $C$ nor $C_{\text{AWD}}$ follows a clean power law against Hessian.
 
