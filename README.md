@@ -4,7 +4,7 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ### Figure 1: Per-layer C–H loglog plot
 
-![Figure 1](Fig1.png)
+![Figure 1](Fig1.pdf)
 
 **Figure 1.** Log-log plots (in Hessian eigenbasis) of the diagonal elements of the empirical noise covariance Covar (left) and the AWD-based (the 2nd moment of persample hessian) H_2 (right) against the Hessian H, computed separately for each layer. Top row: data points are mean-centered and vertically shifted for visualization, which isolates the scaling relationship from absolute magnitude differences across layers. Bottom row: raw data plotted directly. Each layer exhibits a clean power-law relationship $C \propto H^\gamma$ with $R^2 > 0.99$. The magnitude ranges of the diagonal elements of C and H overlap strongly across layers. The fitted exponent $\gamma$ decreases from $\approx 1.39$ (Layer 1, blue) to $\approx 1.11$ (Layer 4, purple), but remains within $(1,2)$ across all layers, consistent with our theoretical prediction. The AWD-based H_2 reproduces the empirical slopes faithfully.
 
