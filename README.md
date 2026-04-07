@@ -18,7 +18,7 @@ All experiments use a deeper MLP (784–50–50–50–50–10) trained on MNIST
 
 ![Figure 3](Fig3.png)
 
-**Figure 3.** Top row: numerically computed covariance $C$. Bottom row: the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian). Left column: the matrix represented in the Hessian eigenbasis. Middle column: the scale-invariant correlation matrix $R_{\mathrm{real}}$, normalized by diagonal elements (mean $\mu$ and variance $\sigma^2$ shown). Right column: the randomized baseline $R_{\mathrm{rand}}$, constructed by randomly rotating the matrix while preserving its eigenvalue spectrum. For both $C$ and $C_{\text{AWD}}$, the true-eigenbasis correlation $R_{\mathrm{real}}$ has substantially smaller mean and variance than the randomized baseline $R_{\mathrm{rand}}$, confirming that approximate commutativity holds at the multi-layer level.
+**Figure 3.** Top row: numerically computed covariance $C$. Bottom row: the AWD-based $C_{\text{AWD}}$ (the 2nd moment of persample hessian). Left column: the matrix represented in the Hessian eigenbasis (Top 300 dimensions plotted). Middle column: the scale-invariant correlation matrix $R_{\mathrm{real}}$ (Top 2500 dimensions plotted), normalized by diagonal elements (mean $\mu$ and variance $\sigma^2$ shown). Right column: the randomized baseline $R_{\mathrm{rand}}$ (Top 2500 dimensions plotted), constructed by randomly rotating the matrix while preserving its eigenvalue spectrum. For both $C$ and $C_{\text{AWD}}$, the true-eigenbasis correlation $R_{\mathrm{real}}$ has substantially smaller mean and variance than the randomized baseline $R_{\mathrm{rand}}$, confirming that approximate commutativity holds at the multi-layer level.
 
 ### Figure 4: Non-negligible off-diagonal coupling
 
